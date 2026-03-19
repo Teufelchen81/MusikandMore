@@ -1,1 +1,64 @@
-# MusikandMore
+/* Globales Hintergrundbild */
+html, body, #root, .app, .main, .container {
+    background: url("https://dein-link-zum-bild.jpg") no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+/* Alle Standard-Hintergründe entfernen */
+* {
+    background-color: transparent !important;
+}
+
+/* Dunkles Overlay für Lesbarkeit */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* 🔥 Animiertes Feuer-Flackern */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background: radial-gradient(circle at 50% 80%, rgba(255,120,0,0.15), transparent 60%),
+                radial-gradient(circle at 20% 90%, rgba(255,80,0,0.1), transparent 70%),
+                radial-gradient(circle at 80% 90%, rgba(255,60,0,0.1), transparent 70%);
+
+    animation: fireFlicker 3s infinite alternate ease-in-out;
+}
+
+/* 🔥 Animation Keyframes */
+@keyframes fireFlicker {
+    0% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 0.65;
+        transform: scale(1.01);
+    }
+}
+
+/* 🔥 Glowing UI Elemente */
+button, .card, .panel {
+    background: rgba(20, 20, 20, 0.7) !important;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 100, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 0 25px rgba(255, 120, 0, 0.8);
+    transform: scale(1.05);
+}
