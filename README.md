@@ -1,6 +1,6 @@
 /* Globales Hintergrundbild */
 html, body, #root, .app, .main, .container {
-    background: url("https://dein-link-zum-bild.jpg") no-repeat center center fixed !important;
+    background: url("[https://dein-link-zum-bild.jpg](https://github.com/Teufelchen81/MusikandMore/blob/main/MusikandMore.jpeg)") no-repeat center center fixed !important;
     background-size: cover !important;
 }
 
